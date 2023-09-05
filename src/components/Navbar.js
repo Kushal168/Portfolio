@@ -29,15 +29,15 @@ const Navbar = () => {
         <nav>
             <CustomLink href="/" title="Home" className='mr-4'/>
             <CustomLink href="/about" title="about" className='mx-4' />
-             <CustomLink href="/projects" title="projects" className='mx-4'/>
+            <CustomLink href="/projects" title="projects" className='mx-4'/>
             <CustomLink href="/articles" title="articles" className='ml-4'/>
             </nav>
         
         <nav className='flex items-center hustify-center flex-wrap'>
-            <motion.a href='http://twitter.com' target='blank' whileHover={{y:-2}} className="w-6 mr-3"><TwitterIcon/></motion.a>
-            <motion.a href='http://github.com' target='blank' className="w-6 mr-3"><Github/></motion.a>
-            <motion.a href='http://linkedin.com' target='blank' className="w-6 mr-3"><Linkedin/></motion.a> 
-            <motion.a href='http://discord.com' target='blank' className="w-6 mr-3"><Discord/></motion.a>
+            <motion.a href='http://twitter.com' target='blank' whileHover={{y:-2}} className="w-6 mx-3" whileTap={{scale:2}}><TwitterIcon/></motion.a>
+            <motion.a href='http://github.com' target='blank' whileHover={{y:-2}} className="w-6 mx-3" whileTap={{scale:2}}><Github/></motion.a>
+            <motion.a href='http://linkedin.com' target='blank'whileHover={{y:-2}} className="w-6 mx-3" whileTap={{scale:2}}><Linkedin/></motion.a> 
+            <motion.a href='http://discord.com' target='blank' whileHover={{y:-2}} className="w-6 mx -3" whileTap={{scale:2}}><Discord/></motion.a>
               
         </nav>
 
