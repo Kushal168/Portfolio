@@ -2,7 +2,8 @@ import Link from 'next/link'
 import React from 'react'
 import Logo from '/src/components/Logo'
 import { useRouter } from 'next/router'
-import TwitterIcon from './Icons'
+import {TwitterIcon,Github,Linkedin,Discord } from './Icons'
+import {motion} from "framer-motion"
 
 const CustomLink = ({href,title,className =""})=>{
     const router = useRouter();
@@ -32,13 +33,12 @@ const Navbar = () => {
             <CustomLink href="/articles" title="articles" className='ml-4'/>
             </nav>
         
-        <nav>
-            <Link href='/' target='blank'><TwitterIcon/></Link>
-            <Link href='/' target='blank'>T</Link>
-            <Link href='/' target='blank'>T</Link>
-            <Link href='/' target='blank'>T</Link>
-            <Link href='/' target='blank'>T</Link>
-            <Link href='/' target='blank'>T</Link>  
+        <nav className='flex items-center hustify-center flex-wrap'>
+            <motion.a href='http://twitter.com' target='blank' whileHover={{y:-2}} className="w-6 mr-3"><TwitterIcon/></motion.a>
+            <motion.a href='http://github.com' target='blank' className="w-6 mr-3"><Github/></motion.a>
+            <motion.a href='http://linkedin.com' target='blank' className="w-6 mr-3"><Linkedin/></motion.a> 
+            <motion.a href='http://discord.com' target='blank' className="w-6 mr-3"><Discord/></motion.a>
+              
         </nav>
 
         <div className='absolute left-[50%] top-2 translate-x-[-50% ]'>
