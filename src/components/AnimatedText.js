@@ -4,12 +4,27 @@ import {motion} from 'framer-motion'
 //on reloading it chnages the opacity
 const quote = {
     initial:{
-        opacity:0,
+        opacity:1,
     },
     animate:{
         opacity:1,
         transition:{
             delay:0.5,
+            // now the foloowing property delay each and every children by 0.08 sec
+            staggerChildren: 0.08
+        }
+    }
+}
+const singleWord = {
+    initial:{
+        opacity:0,
+        y:50,
+    },
+    animate:{
+        opacity:1,
+        y:0,
+        transition:{
+            duration:1
         }
     }
 }
@@ -24,9 +39,15 @@ const AnimatedText = ({text,className=""}) => {
       >
         {
             text.split(" ").map((word,index)=>
-                <span key={word+'-'+index} className='inline-block'>
+                <motion.span key={word+'-'+index} className='inline-block'
+                variants={singleWord}
+
+                // with the use of staggerChildren we dont need this
+                // initial="initial"
+                // animate="animate"
+                >
                     {word}&nbsp;
-                </span>
+                </motion.span>
             )
         }
         {/* {text} */}
