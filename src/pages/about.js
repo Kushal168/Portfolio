@@ -2,8 +2,37 @@ import AnimatedText from '@/components/AnimatedText'
 import Layout from '@/components/Layout'
 import Head from 'next/head'
 import Image from 'next/image'
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import profilePic from "../../public/images/profile/developer-pic-2.jpg"
+import { useInView, useMotionValue, useSpring } from 'framer-motion'
+
+// seperate commponents for numbers 
+const AnimatedNumbers = ({value})=>{
+ const ref =  useRef(null);
+
+//these hooks provided by framer motion
+ const motionValue = useMotionValue(0);
+ const springValue = useSpring(motionValue,{duration:3000});
+ const isInView = useInView(ref);
+
+ useEffect(()=>{
+  if(isInView){
+    motionValue.set(value);
+  }
+ },[isInView,value,motionValue])
+
+ useEffect(()=>{
+  springValue.on("change",(latest)=>{
+    // console.log(latest)
+    if(ref.current && latest.toFixed(0) <= value){
+      ref.current.textContent = latest .toFixed(0)
+    }
+  })
+ },[springValue,value])
+
+
+  return <span ref={ref}></span>
+}
 
 const about = () => {
   return (
@@ -19,7 +48,7 @@ const about = () => {
           <div className='col-span-3 flex flex-col items-start justify-start'>
             <h2 className='mb-4 text-lg font-bold uppercase text-dark/75'>Biography</h2>
             <p className='font-medium'>
-            Hi, I'm CodeBucks, a web developer and UI/UX designer with a passion for creating beautiful, functional, 
+            Hi, I&apos;m Kushal Goyal, a web developer and UI/UX designer with a passion for creating beautiful, functional, 
             and user-centered digital experiences. With 4 years of experience in the field. I am always looking for 
             new and innovative ways to bring my clients&apos; visions to life.
             </p>
@@ -43,6 +72,31 @@ const about = () => {
           <Image src={profilePic} alt='Refresh it' className='w-full h-auto rounded-2'></Image>
       </div>
 
+      <div className='col-span-2 flex flex-col items-end justify-between'>
+
+      <div className='flex flex-col items-end justify-center'>
+        <span className='inline-block text-7xl font-bold'>
+        <AnimatedNumbers value={50}></AnimatedNumbers>+
+        </span>
+        <h2 className='text-xl font-medium capitalize text-dark/75'>satisfied clients</h2>
+        </div>
+
+        <div className='flex flex-col items-end justify-center'>
+        <span className='inline-block text-7xl font-bold'>
+          40+
+        </span>
+        <h2 className='text-xl font-medium capitalize text-dark/75'>projects complete</h2>
+        </div>
+
+        <div className='flex flex-col items-end justify-center'>
+        <span className='inline-block text-7xl font-bold'>
+          4+
+        </span>
+        <h2 className='text-xl font-medium capitalize text-dark/75'>years of expirence </h2>
+        </div>
+        
+        </div>
+        
         </div>
         </Layout>
       </main>
