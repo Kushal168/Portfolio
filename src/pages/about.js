@@ -1,7 +1,9 @@
 import AnimatedText from '@/components/AnimatedText'
 import Layout from '@/components/Layout'
 import Head from 'next/head'
+import Image from 'next/image'
 import React from 'react'
+import profilePic from "../../public/images/profile/developer-pic-2.jpg"
 
 const about = () => {
   return (
@@ -33,7 +35,14 @@ const about = () => {
             every project I work on. I look forward to the opportunity to bring my skills and passion to your next project.
             </p>
             
-          </div>
+          </div >
+
+      {/* add a profile pichture for about page*/}
+      <div className='col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light p-8'>
+        <div className='absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark'/>
+          <Image src={profilePic} alt='Refresh it' className='w-full h-auto rounded-2'></Image>
+      </div>
+
         </div>
         </Layout>
       </main>
