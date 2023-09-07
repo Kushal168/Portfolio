@@ -27,10 +27,10 @@ const Navbar = () => {
   return (
     <header className='w-full px-32 py-8 font-medium flex items-center justify-between'>
         <nav>
-            <CustomLink href="/" title="Home" className='mr-4'/>
-            <CustomLink href="/about" title="about" className='mx-4' />
-            <CustomLink href="/projects" title="projects" className='mx-4'/>
-            <CustomLink href="/articles" title="articles" className='ml-4'/>
+            <CustomLink href="/" title="Home" className='mr-4 font-semibold'/>
+            <CustomLink href="/about" title="about" className='mx-4 font-semibold' />
+            <CustomLink href="/projects" title="projects" className='mx-4 font-semibold'/>
+            <CustomLink href="/articles" title="articles" className='ml-4 font-semibold'/>
             </nav>
         
         <nav className='flex items-center hustify-center flex-wrap'>
