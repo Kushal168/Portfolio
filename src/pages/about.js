@@ -13,7 +13,7 @@ const AnimatedNumbers = ({value})=>{
 //these hooks provided by framer motion
  const motionValue = useMotionValue(0);
  const springValue = useSpring(motionValue,{duration:3000});
- const isInView = useInView(ref);
+ const isInView = useInView(ref,{once:true });
 
  useEffect(()=>{
   if(isInView){
@@ -83,14 +83,14 @@ const about = () => {
 
         <div className='flex flex-col items-end justify-center'>
         <span className='inline-block text-7xl font-bold'>
-          40+
+        <AnimatedNumbers value={40}></AnimatedNumbers>+
         </span>
         <h2 className='text-xl font-medium capitalize text-dark/75'>projects complete</h2>
         </div>
 
         <div className='flex flex-col items-end justify-center'>
         <span className='inline-block text-7xl font-bold'>
-          4+
+        <AnimatedNumbers value={4}></AnimatedNumbers>+
         </span>
         <h2 className='text-xl font-medium capitalize text-dark/75'>years of expirence </h2>
         </div>
