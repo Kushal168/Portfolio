@@ -102,6 +102,8 @@ const about = () => {
         </div>
         <Skills/>
         </Layout>
+        
+        {/* must add expirence here */}
         <Expirence/>
       </main>
     </div>
