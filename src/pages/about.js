@@ -42,7 +42,7 @@ const about = () => {
     <div>
       <Head>
         <title>Kushal | About page</title>
-        {/* <meta name='discription' content='any discription' /> */}
+        <meta name='discription' content='any discription' />
       </Head>
       <main className='flex w-full flex-col items-center justify-center'>
         <Layout className='pt-16'>
