@@ -8,7 +8,7 @@ const Details = ({posiiton,comapny,companyLink, time, address, work})=>{
     const ref  = useRef(null)
     return(
         <li ref={ref} className='my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-center justify-between'>
-          <LiIcon reference={ref}></LiIcon> 
+          <LiIcon reference={ref}/> 
             <motion.div
             initial={{y:50}}
             whileInView={{y:0}}
@@ -40,52 +40,51 @@ const Expirence = () => {
   return (
     <div className='my-64'>
      <h2 className="font-bold text-8xl mb-32 w-full text-center">
-        Expirence
+        Education
         </h2>
 
         <div  ref={ref} className='w-[75%] mx-auto relative'>
             <motion.div style={{scaleY:scrollYProgress}} className='absolute left-9 top-0 w-[4px] h-full bg-dark origin-top'/>
-            <ul className='w-full flex flex-col justify-between ml-4'>
+            <ul className='w-full flex flex-col items-start justify-between ml-4'>
                 <Details
                 posiiton="software Engineer" comapny="Google"
                 companyLink="www.google.com" time="2022-present" address="Mountian View"
                 work="Worked on a team responsible for developing new features for Google's 
                 search engine, including improving the accuracy and relevance of search results and 
                 developing new tools for data analysis and visualization."
-                >
-                </Details>
+                />
+
                 <Details
                 posiiton="software Engineer" comapny="Google"
                 companyLink="www.google.com" time="2022-present" address="Mountian View"
                 work="Worked on a team responsible for developing new features for Google's 
                 search engine, including improving the accuracy and relevance of search results and 
                 developing new tools for data analysis and visualization."
-                >
-                </Details>
+                />
+
                 <Details
                 posiiton="software Engineer" comapny="Google"
                 companyLink="www.google.com" time="2022-present" address="Mountian View"
                 work="Worked on a team responsible for developing new features for Google's 
                 search engine, including improving the accuracy and relevance of search results and 
                 developing new tools for data analysis and visualization."
-                >
-                </Details>
+               />
+               
                 <Details
                 posiiton="software Engineer" comapny="Google"
                 companyLink="www.google.com" time="2022-present" address="Mountian View"
                 work="Worked on a team responsible for developing new features for Google's 
                 search engine, including improving the accuracy and relevance of search results and 
                 developing new tools for data analysis and visualization."
-                >
-                </Details>
+                />
+
                 <Details
                 posiiton="software Engineer" comapny="Google"
                 companyLink="www.google.com" time="2022-present" address="Mountian View"
                 work="Worked on a team responsible for developing new features for Google's 
                 search engine, including improving the accuracy and relevance of search results and 
                 developing new tools for data analysis and visualization."
-                >
-                </Details>
+                /> 
                 
             </ul>
         </div>
