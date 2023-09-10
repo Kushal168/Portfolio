@@ -40,7 +40,7 @@ const about = () => {
   return (
     <div>
       <Head>
-        <title>Ksuhal | About page</title>
+        <title>Kushal | About page</title>
         {/* <meta name='discription' content='any discription' /> */}
       </Head>
       <main className='flex w-full flex-col items-center justify-center'>
