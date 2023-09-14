@@ -13,7 +13,7 @@ const useThemeSwitcher = () => {
 
         const handleChange =()=>{
             if(userPref){
-                let check = userPref ==='dark'? "dark" : "light"
+                let check = userPref ==="dark"? "dark" : "light"
                 setMode(check);
 
                 if(check === "dark"){
@@ -26,9 +26,22 @@ const useThemeSwitcher = () => {
             else{
                 let check = mediaQuery.matches ? "dark" : "light"
                 setMode(check);
+                window.localStorage.setItem(
+                    "theme",
+                    check
+                );
+                if(check === "dark")  {
+                    document.documentElement.classList.add("dark")
+                }
+                else{
+                    document.documentElement.classList.remove("dark")
+                 }
             }
 
-        }
+        } 
+
+        //checking the condition on first load as well
+        handleChange();
 
         mediaQuery.addEventListener("change",handleChange);
 
@@ -39,16 +52,27 @@ const useThemeSwitcher = () => {
     },[])
 
     //update the value in the local storage
-    useEffect(()=>{
-        if(mode == "dark"){
-            window.localStorage.setItem("theme","dark");
-            document.documentElement.classList.add("dark")
-        }
-        else{
-            window.localStorage.setItem("theme","light");
-            document.documentElement.classList.remove("dark")
-        }
-    },[mode])
+    // useEffect(()=>{
+    //     if(mode == "dark"){
+    //         window.localStorage.setItem("theme","dark");
+    //         document.documentElement.classList.add("dark")
+    //     }
+    //     else{
+    //         window.localStorage.setItem("theme","light");
+    //         document.documentElement.classList.remove("dark")
+    //     }
+    // },[mode])
+    useEffect(() => {
+        setTimeout(() => {
+            if (mode === "dark") {
+                window.localStorage.setItem("theme", "dark");
+                document.documentElement.classList.add("dark");
+            } else {
+                window.localStorage.setItem("theme", "light");
+                document.documentElement.classList.remove("dark");
+            }
+        }, 100); // Adjust the delay as needed
+    }, [mode]);
 
   return (
     // <div>
