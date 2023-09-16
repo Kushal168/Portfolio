@@ -22,7 +22,12 @@ const FeaturedProjects = ({type, title, summary, img, link, github}) =>{
         <Link href={link} target="blank"
         className='w-1/2 cursor-pointer overflow-hidden rounded-lg'
         >
-            <Image src={img} alt={title} className='w-full h-auto'></Image>
+            {/* we can also add framer image here just to add propertry like whileHover or Transition*/}
+            <Image src={img} alt={title} className='w-full h-auto'
+            while
+             priority
+             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
         </Link>
             <div className='w-1/2 flex flex-col items-start justify-between pl-6'>
                 <span className='text-primary font medium text-xl dark:text-primaryDark'> {type} </span>
