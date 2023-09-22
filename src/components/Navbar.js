@@ -37,14 +37,14 @@ const Navbar = () => {
 
   return (
     <header className='w-full px-32 py-8 font-medium flex items-center justify-between
-    dark:text-light'
+    dark:text-light relative'
     >
 
         {/* making website responsive */}
         {/* this is the menu type */}
         <button className=' flex-col justify-center items-center hidden lg:flex' onClick={handleClick}>
-            <span className={`bg-dark dark:bg-light translate-all duration-300 block ease-out h-0.5 w-6 rounded-sm ${isOpen ? 'rotate-45 translate-y-1' : '-translate-y-0.5'}`}></span>
-            <span className={`'bg-dark dark:bg-light block translate-all duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5 ${isOpen ? 'opacity-0' : 'opacity-100'}`}></span>
+            <span className={`bg-dark dark:bg-light block translate-all duration-300  ease-out h-0.5 w-6 rounded-sm ${isOpen ? 'rotate-45 translate-y-1' : '-translate-y-0.5'}`}></span>
+            <span className={`bg-dark dark:bg-light block translate-all duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5 ${isOpen ? 'opacity-0' : 'opacity-100'}`}></span>
             <span className={`bg-dark dark:bg-light block translate-all duration-300 ease-out h-0.5 w-6 rounded-sm ${isOpen ? '-rotate-45 -translate-y-1' : 'translate-y-0.5'}`}></span>
         </button>
 
@@ -79,7 +79,7 @@ const Navbar = () => {
         </nav>
         </div>
 
-        <div className="min-w-[70vw] flex flex-col justify-between items-center fixed top-1/2 left-1/2 -translate-x-1/2">
+        <div className="min-w-[70vw] flex flex-col justify-between z-30 items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
         <nav>
             <CustomLink href="/" title="Home" className='mr-4 font-semibold'/>
             <CustomLink href="/about" title="about" className='mx-4 font-semibold' />
