@@ -26,6 +26,33 @@ const CustomLink = ({href,title,className =""})=>{
     )
 }
 
+const CustomMobileLink = ({href,title,className ="", toggle})=>{
+    const router = useRouter();
+    
+    const handleClick=()=>{
+        toggle();
+        router.push(href)
+    }
+
+    
+    // console.log(router)
+    //it give us a property of asPath which shows the URL on which the user is
+    return(
+        <button href={href} className={`${className} relative group text-light dark:text-dark my-2 ` } onClick={handleClick}>
+            {title}
+            <span className={`h-[1px] inline-block bg-light dark:bg-dark
+            absolute left-0 -bottom-0.5
+            group-hover:w-full transition-[width] ease duration-300
+            ${router.asPath === href ? 'w-full' : 'w-0'}
+            dark:bg-light
+            `}
+            >
+                &nbsp;
+                </span>
+        </button>
+    )
+}
+
 const Navbar = () => {
 
     const[mode,setMode] = useThemeSwitcher();
@@ -60,7 +87,7 @@ const Navbar = () => {
         
         <nav className='flex items-center hustify-center flex-wrap'>
             <motion.a href='http://twitter.com' target='blank' whileHover={{y:-2}} className="w-6 mx-3" whileTap={{scale:2}}><TwitterIcon/></motion.a>
-            <motion.a href='http://github.com' target='blank' whileHover={{y:-2}} className="w-6 mx-3" whileTap={{scale:2}}><Github/></motion.a>
+            <motion.a href='http://github.com' target='blank' whileHover={{y:-2}} className="w-6 mx-3  " whileTap={{scale:2}}><Github/></motion.a>
             <motion.a href='http://linkedin.com' target='blank'whileHover={{y:-2}} className="w-6 mx-3" whileTap={{scale:2}}><Linkedin/></motion.a> 
             <motion.a href='http://discord.com' target='blank' whileHover={{y:-2}} className="w-6 mx -3" whileTap={{scale:2}}><Discord/></motion.a>
 
@@ -79,21 +106,26 @@ const Navbar = () => {
         </nav>
         </div>
 
-        <div className="min-w-[70vw] flex flex-col justify-between z-30 items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
-        bg-dark/90 dark:bg-light/75 rounded-lg backdrop-blur-md py-32
+       {
+        isOpen ?
+        <motion.div 
+        initial={{scale:0, opacity:0, x:"-50%",  y:"-50%"}}
+        animate={{scale:1 , opacity:1}}
+        className="min-w-[70vw] flex flex-col justify-between z-30 items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+        bg-dark/90 dark:bg-light/75 rounded-lg backdrop-blur-md py-32 
         ">
         <nav className='flex items-center flex-col justify-center'>
-            <CustomLink href="/" title="Home" className='mr-4 font-semibold'/>
-            <CustomLink href="/about" title="about" className='mx-4 font-semibold' />
-            <CustomLink href="/projects" title="projects" className='mx-4 font-semibold'/>
+            <CustomMobileLink href="/" title="Home" className='' toggle={handleClick} />
+            <CustomMobileLink href="/about" title="about" className='' toggle={handleClick} />
+            <CustomMobileLink href="/projects" title="projects" className='' toggle={handleClick} />
             {/* <CustomLink href="/articles" title="articles" className='ml-4 font-semibold'/> */}
             </nav>
         
-        <nav className='flex items-center hustify-center flex-wrap'>
-            <motion.a href='http://twitter.com' target='blank' whileHover={{y:-2}} className="w-6 mx-3" whileTap={{scale:2}}><TwitterIcon/></motion.a>
-            <motion.a href='http://github.com' target='blank' whileHover={{y:-2}} className="w-6 mx-3" whileTap={{scale:2}}><Github/></motion.a>
-            <motion.a href='http://linkedin.com' target='blank'whileHover={{y:-2}} className="w-6 mx-3" whileTap={{scale:2}}><Linkedin/></motion.a> 
-            <motion.a href='http://discord.com' target='blank' whileHover={{y:-2}} className="w-6 mx -3" whileTap={{scale:2}}><Discord/></motion.a>
+        <nav className='flex items-center hustify-center flex-wrap mt-2'>
+            <motion.a href='http://twitter.com' target='blank' whileHover={{y:-2}} className="w-6 mx-3 sm:mx-1" whileTap={{scale:2}}><TwitterIcon/></motion.a>
+            <motion.a href='http://github.com' target='blank' whileHover={{y:-2}} className="w-6 mx-3 bg-light rounded-full dark:bg-dark sm:mx-1 " whileTap={{scale:2}}><Github/></motion.a>
+            <motion.a href='http://linkedin.com' target='blank'whileHover={{y:-2}} className="w-6 mx-3 sm:mx-1" whileTap={{scale:2}}><Linkedin/></motion.a> 
+            <motion.a href='http://discord.com' target='blank' whileHover={{y:-2}} className="w-6 mx -3 sm:mx-1" whileTap={{scale:2}}><Discord/></motion.a>
 
             <button onClick={()=>{setMode(mode === "light" ? "dark" : "light")}}
             // className='ml-3 flex items-center justify-center rounded-full p-1 '
@@ -108,7 +140,9 @@ const Navbar = () => {
             </button>
               
         </nav>
-        </div>
+        </motion.div>
+        : null
+       }
 
 
 
