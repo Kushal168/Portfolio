@@ -51,20 +51,26 @@ const about = () => {
           <div className='col-span-3 flex flex-col items-start justify-start'>
             <h2 className='mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75'>Biography</h2>
             <p className='font-medium'>
-            Hi, I&apos;m Kushal Goyal, a web developer and UI/UX designer with a passion for creating beautiful, functional, 
-            and user-centered digital experiences. With 4 years of experience in the field. I am always looking for 
-            new and innovative ways to bring my clients&apos; visions to life.
+            I&apos;m Kushal Goyal, a Full Stack web developer with 1 year of experience. 
+            My expertise spans JavaScript, React, Node.js, MongoDB, SQL etc. enabling me to develop robust and intuitive solutions. 
+            At Kenstel Networks, I contributed to the Kensel Cloud Enterprise project, demonstrating my proficiency in JavaScript development and proactive 
+            problem-solving. I&apos;ve led projects like Mail-Mastery, a seamless email platform, and a Blog App that enhanced user engagement through intuitive design.
+            I hold a B.Tech in Computer Science and Engineering from Deenbandhu Chhotu Ram University, where I honed my skills
+             in software engineering and innovation.
+
+
             </p>
 
             <p className='font-medium my-4'>
-            I believe that design is about more than just making things look pretty – it&apos;s about solving problems and 
-            creating intuitive, enjoyable experiences for users.
+            Outside of work, I&apos;m passionate about continuous learning and have solved over 250 problems on Leetcode. 
+            I&apos;ve also volunteered at Savera School, supporting education initiatives for underprivileged students. 
+            With a commitment to excellence and user-centric design, Im eager to leverage my skills and experience 
+            to drive success in your next digital project.
             </p>
 
             <p className='font-medium'>
-            Whether I&apos;m working on a website, mobile app, or 
-            other digital product, I bring my commitment to design excellence and user-centered thinking to 
-            every project I work on. I look forward to the opportunity to bring my skills and passion to your next project.
+            I&apos;ve also volunteered at Savera School, supporting education initiatives for underprivileged students.
+            I look forward to the opportunity to bring my skills and passion to your next project.
             </p>
             
           </div >
@@ -82,26 +88,27 @@ const about = () => {
 
       <div className='col-span-2 flex flex-col items-end justify-between'>
 
-      <div className='flex flex-col items-end justify-center '>
-        <span className='inline-block text-7xl font-bold'>
-        <AnimatedNumbers value={50}></AnimatedNumbers>+
-        </span>
-        <h2 className='text-xl font-medium capitalize text-dark/75 dark:text-light/75 '>satisfied clients</h2>
-        </div>
+      
 
         <div className='flex flex-col items-end justify-center'>
         <span className='inline-block text-7xl font-bold'>
-        <AnimatedNumbers value={40}></AnimatedNumbers>+
+        <AnimatedNumbers value={10}></AnimatedNumbers>+
         </span>
         <h2 className='text-xl font-medium capitalize text-dark/75 dark:text-light/75'>projects complete</h2>
         </div>
 
         <div className='flex flex-col items-end justify-center'>
         <span className='inline-block text-7xl font-bold'>
-        <AnimatedNumbers value={4}></AnimatedNumbers>+
+        <AnimatedNumbers value={1}></AnimatedNumbers>+
         </span>
         <h2 className='text-xl font-medium capitalize text-dark/75 dark:text-light/75'>years of expirence </h2>
         </div>
+        {/* <div className='flex flex-col items-end justify-center '>
+        <span className='inline-block text-7xl font-bold'>
+        <AnimatedNumbers value={50}></AnimatedNumbers>+
+        </span>
+        <h2 className='text-xl font-medium capitalize text-dark/75 dark:text-light/75 '>satisfied clients</h2>
+        </div> */}
         
         </div>
         

@@ -64,7 +64,7 @@ const Navbar = () => {
 
   return (
     <header className='w-full px-32 py-8 font-medium flex items-center justify-between
-    dark:text-light relative'
+    dark:text-light relative z-10 lg:px-16 md:px-12 sm:px-8'
     >
 
         {/* making website responsive */}
@@ -86,10 +86,10 @@ const Navbar = () => {
             </nav>
         
         <nav className='flex items-center hustify-center flex-wrap'>
-            <motion.a href='http://twitter.com' target='blank' whileHover={{y:-2}} className="w-6 mx-3" whileTap={{scale:2}}><TwitterIcon/></motion.a>
+            {/* <motion.a href='http://twitter.com' target='blank' whileHover={{y:-2}} className="w-6 mx-3" whileTap={{scale:2}}><TwitterIcon/></motion.a> */}
             <motion.a href='http://github.com' target='blank' whileHover={{y:-2}} className="w-6 mx-3  " whileTap={{scale:2}}><Github/></motion.a>
             <motion.a href='http://linkedin.com' target='blank'whileHover={{y:-2}} className="w-6 mx-3" whileTap={{scale:2}}><Linkedin/></motion.a> 
-            <motion.a href='http://discord.com' target='blank' whileHover={{y:-2}} className="w-6 mx -3" whileTap={{scale:2}}><Discord/></motion.a>
+            {/* <motion.a href='http://discord.com' target='blank' whileHover={{y:-2}} className="w-6 mx -3" whileTap={{scale:2}}><Discord/></motion.a> */}
 
             <button onClick={()=>{setMode(mode === "light" ? "dark" : "light")}}
             // className='ml-3 flex items-center justify-center rounded-full p-1 '
@@ -99,7 +99,8 @@ const Navbar = () => {
                 {/* {
                     mode === "dark" ? <SunIcon className="fill-dark"></SunIcon> : <MoonIcon className="fill-dark"></MoonIcon>
                 } */}
-            eh
+                {mode === "dark" ? "light" : "dark"}
+        
 
             </button>
               

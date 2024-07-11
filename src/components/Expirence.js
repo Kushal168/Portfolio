@@ -40,21 +40,25 @@ const Expirence = () => {
   return (
     <div className='my-64'>
      <h2 className="font-bold text-8xl mb-32 w-full text-center">
-        Education
+       Experience
         </h2>
 
         <div  ref={ref} className='w-[75%] mx-auto relative'>
             <motion.div style={{scaleY:scrollYProgress}} className='absolute left-9 top-0 w-[4px] h-full bg-dark origin-top dark:text-dark dark:bg-light'/>
             <ul className='w-full flex flex-col items-start justify-between ml-4'>
                 <Details
-                posiiton="software Engineer" comapny="Google"
-                companyLink="www.google.com" time="2022-present" address="Mountian View"
-                work="Worked on a team responsible for developing new features for Google's 
-                search engine, including improving the accuracy and relevance of search results and 
-                developing new tools for data analysis and visualization."
+                posiiton="Software Engineer Intern" comapny="Kenstel Networks Pvt. Ltd."
+                companyLink="https://kenstel.com/" time="2022-present" address="Mountian View"
+                work={
+                    <>
+                        <b>Task Execution:</b> Taking on assigned tasks within the Kensel Cloud Enterprise project, demonstrating adaptability and a proactive approach to meet project objectives.
+                        <br />
+                        <b>Website Contributions:</b> Played a pivotal role in the development and enhancement of software solutions, with a primary focus on JavaScript technologies.
+                    </>
+                }
                 />
 
-                <Details
+                {/* <Details
                 posiiton="software Engineer" comapny="Google"
                 companyLink="www.google.com" time="2022-present" address="Mountian View"
                 work="Worked on a team responsible for developing new features for Google's 
@@ -84,7 +88,7 @@ const Expirence = () => {
                 work="Worked on a team responsible for developing new features for Google's 
                 search engine, including improving the accuracy and relevance of search results and 
                 developing new tools for data analysis and visualization."
-                /> 
+                />  */}
                 
             </ul>
         </div>

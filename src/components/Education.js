@@ -37,7 +37,7 @@ const Education = () => {
   return (
     <div className='my-64'>
      <h2 className="font-bold text-8xl mb-32 w-full text-center">
-        Expirence
+        Education
         </h2>
 
         <div  ref={ref} className='w-[75%] mx-auto relative'>
@@ -46,24 +46,23 @@ const Education = () => {
             <ul className='w-full flex flex-col items-start justify-between ml-4'>
 
                 <Details
-                type=" Bachelor Of Science In Computer Science" 
-                time="2016-2020 "
-                place="Massachusetts Institute Of Technology (MIT)"
-                info="Relevant courses included Data Structures and Algorithms, Computer Systems Engineering, and Artificial 
-                Intelligence." 
+                type=" Bachelor Of Technology" 
+                time="2020-2024 "
+                place="Deenbandhu Chhotu Ram University of Science and Technology"
+                info="Relevant courses included Data Structures and Algorithms, OOPS, DBMS. Achieved a CGPA of 8" 
                 />
                 
                 <Details
-                type=" Bachelor Of Science In Computer Science" time="2016-2020 "
-                place="Massachusetts Institute Of Technology (MIT)" info="Relevant courses included Data Structures and Algorithms, Computer Systems Engineering, and Artificial 
-                Intelligence." 
+                type=" Senior Secondary Education" time="2019-2020 "
+                place="G.R.G National Sr. Sen. School" 
+                info="Relevant courses included Physics, Chemistry, Mathematics, and English. Achieved a percentage of 88." 
                 />
                
-                <Details
+                {/* <Details
                 type=" Bachelor Of Science In Computer Science" time="2016-2020 "
                 place="Massachusetts Institute Of Technology (MIT)" info="Relevant courses included Data Structures and Algorithms, Computer Systems Engineering, and Artificial 
                 Intelligence." 
-                />
+                /> */}
                 
   
             </ul>

@@ -3,6 +3,7 @@ import Navbar from '@/components/Navbar'
 import '@/styles/globals.css'
 import {Montserrat} from "next/font/google"
 import Head from 'next/head'
+// import { ThemeProvider } from '../components/themeContext'; 
 
 //using font
 const montserrat = Montserrat({

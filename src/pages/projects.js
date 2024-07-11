@@ -94,66 +94,68 @@ const projects = () => {
 
             <div className='grid grid-cols-12 gap-24 gap-y-32'>
                 <div className='col-span-12'>
-                <FeaturedProjects title="Crypto Screener Application"
-                summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
-                It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your 
-                local currency."
-                link="/"
+                <FeaturedProjects title="Mail-Mastery"
+                summary=" Enjoy a user-friendly email management platform that closely emulates Gmail’s essential features, making
+                it easy to compose, send, and receive emails seamlessly. Experience a seamless email management solution that
+                offers an intuitive interface for a smooth and enjoyable email experience.."
+                link="https://kushalgoyal-gmail-clone.netlify.app"
                 type="Featured Project"
                 github="https://github.com/Kushal168"
                 img={projects1}
 
-                />
-                </div>
-
-
-
-                <div className='col-span-6'>
-                <Project title="Crypto Screener Application"
-                link="/"
-                type="Featured Project"
-                github="https://github.com/Kushal168"
-                img={projects1}
-                />
-                </div>
-
-                <div className='col-span-6'>
-                    <Project title="Crypto Screener Application"
-                link="/"
-                type="Featured Project"
-                github="https://github.com/Kushal168"
-                img={projects1}
                 />
                 </div>
 
                 <div className='col-span-12'>
-                <FeaturedProjects title="Crypto Screener Application"
-                summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
-                It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your 
-                local currency."
-                link="/"
+                <FeaturedProjects title="Chat-App"
+                summary="Develop an innovative chat application using Socket.io and Node.js, providing real-time communication
+                capabilities. Implemented secure user authentication with unique roomname for a private and personalized
+                chat experience. Enforced a strict no-profanity policy to maintain a respectful and safe environment for users.
+                Integrated features for users to easily share their current location, enhancing connectivity and communication
+                within the chat."
+                link="https://kushal-new-chit-chat.glitch.me"
                 type="Featured Project"
                 github="https://github.com/Kushal168"
                 img={projects1}
 
                 />
                 </div>
+                <div className='col-span-12'>
+                <FeaturedProjects title="Blog-App"
+                summary="Spearheaded the development of an innovative blog app, resulting in a significant increase in user engagement within the first month. Successfully implemented user-friendly features, contributing to a notable
+                rise in the number of published articles. Established a vibrant community of readers, fostering a substantial
+                increase in user interactions through comments."
+                link="https://kushal-blog-app.netlify.app"
+                type="Featured Project"
+                github="https://github.com/Kushal168"
+                img={projects1}
+
+                />
+                </div>
+
+
+
                 <div className='col-span-6'>
-                <Project title="Crypto Screener Application"
+                <Project title="weather-app"
+                link="https://github.com/Kushal168/weather-app"
+                type="Featured Project"
+                github="https://github.com/Kushal168"
+                img={projects1}
+                />
+                </div>
+
+                <div className='col-span-6'>
+                    <Project title="FoodiePal"
                 link="/"
                 type="Featured Project"
                 github="https://github.com/Kushal168"
                 img={projects1}
                 />
                 </div>
-                <div className='col-span-6'>
-                <Project title="Crypto Screener Application"
-                link="/"
-                type="Featured Project"
-                github="https://github.com/Kushal168"
-                img={projects1}
-                />
-                </div>
+
+               
+               
+                
             </div>
 
         </Layout>
